@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import '../models/category.dart';
 import 'score_screen.dart';
 
-class QuizScreen extends StatefulWidget {
+class DetailedView extends StatefulWidget {
   final Category category;
 
-  QuizScreen({required this.category});
+  DetailedView({required this.category});
 
   @override
-  _QuizScreenState createState() => _QuizScreenState();
+  _DetailedViewState createState() => _DetailedViewState();
 }
 
-class _QuizScreenState extends State<QuizScreen> {
+class _DetailedViewState extends State<DetailedView> {
   int currentIndex = 0;
   int score = 0;
   Color? _flashColor;

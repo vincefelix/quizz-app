@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'quiz_screen.dart';
+import 'DetailedView.dart';
 import '../models/category.dart';
 import '../models/question.dart';
 
@@ -260,7 +260,7 @@ class CategoriesScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => QuizScreen(category: category),
+                  builder: (context) => DetailedView(category: category),
                 ),
               );
             },

@@ -55,6 +55,7 @@ class _QuizScreenState extends State<QuizScreen> {
   Widget build(BuildContext context) {
     final question = widget.category.questions[currentIndex];
     return Scaffold(
+      backgroundColor: Colors.blueAccent,
       appBar: AppBar(
         title: Text(widget.category.name),
       ),

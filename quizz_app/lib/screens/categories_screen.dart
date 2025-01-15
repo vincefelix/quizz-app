@@ -26,25 +26,25 @@ class CategoriesScreen extends StatelessWidget {
             'lib/assets/images/ghana_empire.png',
             true), // Il a prospéré entre le 4ᵉ et le 13ᵉ siècle.
         Question(
+            "Lat Dior Ngoné Latyr Diop, né en 1842 à Derklé",
+            'lib/assets/images/lat_dior.png',
+            false), // Lat Dior est une figure historique majeure au Sénégal.
+        Question(
             "Le fleuve Sénégal était une route commerciale importante pour les explorateurs et les commerçants.",
             'lib/assets/images/senegal_river.png',
             true), // Il servait à transporter des marchandises comme l'or et les esclaves.
-        Question(
-            "Lat Dior Ngoné Latyr Diop, né en 1842 à Derklé",
-            'lib/assets/images/lat_dior.png',
-            true), // Lat Dior est une figure historique majeure au Sénégal.
         Question(
             "L’empire Songhaï a prospéré grâce à son contrôle du commerce transsaharien.",
             'lib/assets/images/songhai_empire.png',
             true), // L'empire Songhaï était un centre économique et culturel.
         Question(
-            "L'île de Gorée, au Sénégal, était un centre d'éducation durant la colonisation.",
-            'lib/assets/images/goree.png',
-            false), // L'île de Gorée est tristement célèbre pour son rôle dans la traite négrière.
-        Question(
             "Samory Touré était un résistant célèbre en Afrique de l'Ouest contre la colonisation française.",
             'lib/assets/images/history.png',
             true), // Samory Touré a combattu les forces françaises pendant plusieurs années.
+        Question(
+            "L'île de Gorée, au Sénégal, était un centre d'éducation durant la colonisation.",
+            'lib/assets/images/goree.png',
+            false), // L'île de Gorée est tristement célèbre pour son rôle dans la traite négrière.
         Question(
             "Le Sénégal avait trois grands royaumes : le Tekrour, le Djolof et le Waalo.",
             'lib/assets/images/senegal_kingdoms.png',

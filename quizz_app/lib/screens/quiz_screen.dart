@@ -20,16 +20,14 @@ class _QuizScreenState extends State<QuizScreen> {
     final correctAnswer = widget.category.questions[currentIndex].answer;
 
     setState(() {
-      // Détermine la couleur du flash (vert si correct, rouge si incorrect)
       _flashColor = userAnswer == correctAnswer
           ? Colors.green.withOpacity(0.5)
           : Colors.red.withOpacity(0.5);
     });
 
-    // Affiche le flash pendant 500 ms avant de passer à la question suivante
     Future.delayed(Duration(milliseconds: 500), () {
       setState(() {
-        _flashColor = null; // Supprime le flash
+        _flashColor = null;
       });
 
       if (userAnswer == correctAnswer) {
@@ -54,6 +52,7 @@ class _QuizScreenState extends State<QuizScreen> {
   @override
   Widget build(BuildContext context) {
     final question = widget.category.questions[currentIndex];
+
     return Scaffold(
       backgroundColor: Colors.blueAccent,
       appBar: AppBar(
@@ -61,33 +60,47 @@ class _QuizScreenState extends State<QuizScreen> {
       ),
       body: Stack(
         children: [
-          Column(
-            children: [
-              Image.asset(question.imageUrl, height: 200, fit: BoxFit.cover),
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Text(
-                  question.question,
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                  textAlign: TextAlign.center,
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image.asset(
+                  question.imageUrl,
+                  height: 200,
+                  fit: BoxFit.cover,
                 ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  ElevatedButton(
-                    onPressed: () => _answerQuestion(true),
-                    child: Text('True'),
+                SizedBox(height: 16),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: Text(
+                    question.question,
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  ElevatedButton(
-                    onPressed: () => _answerQuestion(false),
-                    child: Text('False'),
-                  ),
-                ],
-              ),
-            ],
+                ),
+                SizedBox(height: 24),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () => _answerQuestion(true),
+                      child: Text('True'),
+                    ),
+                    SizedBox(width: 16),
+                    ElevatedButton(
+                      onPressed: () => _answerQuestion(false),
+                      child: Text('False'),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
-          // Flash overlay
           if (_flashColor != null)
             AnimatedOpacity(
               duration: Duration(milliseconds: 300),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'categories_screen.dart';
 
-
 class SplashScreen extends StatefulWidget {
   @override
   _SplashScreenState createState() => _SplashScreenState();
@@ -23,22 +22,31 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.blueAccent,
-      body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min, // Centre le contenu verticalement
-          children: [
-            Icon(Icons.quiz, size: 100, color: Colors.white),
-            SizedBox(height: 20),
-            Text(
-              'Welcome to Quiz App',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
+      body: Stack(
+        children: [
+          // Contenu centré
+          Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(Icons.quiz, size: 100, color: Colors.white),
+                SizedBox(height: 20),
+                Text(
+                  'Welcome to Quiz App',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
             ),
-            SizedBox(height: 50),
-            Text(
+          ),
+          // Texte en bas à droite
+          Positioned(
+            bottom: 16,
+            right: 16,
+            child: Text(
               'Designed by Vince',
               style: TextStyle(
                 color: Colors.white70,
@@ -46,8 +54,8 @@ class _SplashScreenState extends State<SplashScreen> {
                 fontStyle: FontStyle.italic,
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

@@ -67,7 +67,7 @@ class _QuizScreenState extends State<QuizScreen> {
               children: [
                 Image.asset(
                   question.imageUrl,
-                  height: 200,
+                  height: 180,
                   fit: BoxFit.cover,
                 ),
                 SizedBox(height: 16),

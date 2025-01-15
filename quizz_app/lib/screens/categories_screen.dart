@@ -47,7 +47,7 @@ class CategoriesScreen extends StatelessWidget {
             false), // L'île de Gorée est tristement célèbre pour son rôle dans la traite négrière.
         Question(
             "Le Sénégal avait trois grands royaumes : le Tekrour, le Djolof et le Waalo.",
-            'lib/assets/images/senegal_kingdoms.png',
+            'lib/assets/images/history.png',
             true), // Ce sont les royaumes les plus connus de l'histoire sénégalaise.
       ],
     ),
@@ -248,8 +248,8 @@ class CategoriesScreen extends StatelessWidget {
         padding: EdgeInsets.all(10),
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
-          mainAxisSpacing: 10,
-          crossAxisSpacing: 10,
+          mainAxisSpacing: 15,
+          crossAxisSpacing: 15,
           childAspectRatio: 3 / 2,
         ),
         itemCount: categories.length,

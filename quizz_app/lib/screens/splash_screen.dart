@@ -24,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: Colors.blueAccent,
       body: Stack(
         children: [
-          // Contenu centré
+          
           Center(
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -42,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
               ],
             ),
           ),
-          // Texte en bas à droite
+
           Positioned(
             bottom: 16,
             right: 16,
